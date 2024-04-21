@@ -20,6 +20,7 @@
         <module>server-dao</module>
         <module>server-service</module>
         <module>server-web</module>
+        <module>server-common</module>
     </modules>
 
     <properties>
