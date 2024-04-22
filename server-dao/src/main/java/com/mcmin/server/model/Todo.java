@@ -1,5 +1,6 @@
 package com.mcmin.server.model;
 
+import com.mcmin.server.dto.PageDTO;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -7,7 +8,7 @@ import javax.persistence.Table;
 
 @Data
 @Table(name = "T_DOTO")
-public class Todo {
+public class Todo extends PageDTO {
     @Column(name = "ID")
     private String id;
 
