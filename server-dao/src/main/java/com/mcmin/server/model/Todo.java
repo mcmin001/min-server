@@ -4,11 +4,15 @@ import com.mcmin.server.dto.PageDTO;
 import lombok.Data;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Data
-@Table(name = "T_DOTO")
+@Entity
+@Table(name = "T_TODO")
 public class Todo extends PageDTO {
+    @Id
     @Column(name = "ID")
     private String id;
 
@@ -31,5 +35,5 @@ public class Todo extends PageDTO {
     private String tenantId;
 
     @Column(name = "DEL_FLAG")
-    private int delFlag;
+    private Integer delFlag = 0;
 }

@@ -31,5 +31,11 @@
             <AppenderRef ref="Console"/>
             <AppenderRef ref="RollingFile"/>
         </Root>
+        <!-- 设置org.hibernate.SQL包的日志级别为DEBUG -->
+        <Logger name="org.hibernate.SQL" level="DEBUG"/>
+        <!-- 设置org.hibernate.type.descriptor.sql包的日志级别为TRACE -->
+        <Logger name="org.hibernate.type.descriptor.sql" level="TRACE"/>
+        <!-- 设置org.hibernate.type.descriptor.sql.BasicBinder类的日志级别为TRACE -->
+        <Logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>
     </Loggers>
 </Configuration>

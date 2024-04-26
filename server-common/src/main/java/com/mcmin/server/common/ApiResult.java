@@ -13,9 +13,8 @@ public class ApiResult<T> {
     }
 
     public ApiResult (int code, T data){
-        ApiResult apiResult = new ApiResult();
-        apiResult.setCode(1);
-        apiResult.setData(data);
+        this.code = code;
+        this.data = data;
     }
 
     public static <T> ApiResult success(T data){

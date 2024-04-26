@@ -31,6 +31,6 @@ public class TodoServiceImpl implements TodoService {
             spec.and((root, query, criteriaBuilder)-> criteriaBuilder.like(root.get("todoContent"), "%" + todoDTO.getTodoContent() + "%"));
         }
 
-        return todoDao.getPage(spec, PageRequest.of(todoDTO.getCurrentPageNo(), todoDTO.getPageSize()));
+        return todoDao.findAll(spec, PageRequest.of(todoDTO.getCurrentPageNo(), todoDTO.getPageSize()));
     }
 }
